@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfólio de Bernardo Szajnfarber</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #000000;
+            color: #333;
+        }
+
+        nav.navbar {
+            background-color: #1eff00;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav.navbar a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav.navbar a:hover {
+            color: #1e90ff;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background-color: #366814;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #home {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #000000, #00ff62);
+            color: white;
+            border-radius: 0 0 50% 50% / 20%;
+            margin-bottom: 3rem;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .buttonfale {
+            background-color: #48ff00;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .buttonfale:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+
+        #sobre h1 {
+            margin-bottom: 1rem;
+            color: #278d19;
+        }
+
+        #sobre p {
+            font-size: 1.1rem;
+            text-align: justify;
+            white-space: pre-line;
+            color:white
+        }
+
+        #projetos h1 {
+            color: #1e90ff;
+            margin-bottom: 1rem;
+        }
+
+        #projetos h3 {
+            font-weight: normal;
+            color: #666;
+        }
+
+        #contato h2 {
+            color: #1e90ff;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsividade simples */
+        @media (max-width: 600px) {
+            nav.navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            #home h1 {
+                font-size: 2rem;
+            }
+
+            #home p {
+                font-size: 1.2rem;
+            }
+        }
+        .buttonpro { background-color: #00ff2a;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width:20%;
+        }
+
+        .buttonpro:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+        #projetos h4{
+            color:#fff
+        }
+         #projetos  p{
+            color:blue;
+
+         }
+         
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+        <a href="#sobre">Sobre Mim</a>
+    </nav>
+
+    <section id="home">
+        <h1>Meu nome é Bernardo</h1>
+        <p>Desenvolvedor Front-End</p>
+        <a href="#contato" class="buttonfale">Fale Comigo</a>
+    </section>
+
+    <section id="sobre">
+        <h1>Minha autobiografia</h1>
+        <p>
+            Meu nome é Bernardo e nasci em 1º de março de 2012. Desde pequeno sempre tive uma grande curiosidade sobre como as coisas funcionam, principalmente no mundo digital. Essa curiosidade se transformou em paixão pela programação, que se tornou parte importante da minha vida.
+            <br /><br />
+            Com o tempo, comecei a aprender linguagens como JavaScript, Python, HTML e CSS, explorando desde a criação de sites até pequenos projetos e experimentos. O que mais me motiva é poder transformar ideias em realidade através do código e ver como a tecnologia pode impactar positivamente as pessoas.
+            <br /><br />
+            Mesmo jovem, busco constantemente aprender coisas novas, me desafiar em projetos e desenvolver soluções criativas. A programação não é apenas um hobby, mas também um caminho que quero seguir para o futuro, unindo dedicação, inovação e aprendizado contínuo.
+        </p>
+    </section>
+
+    <section id="projetos">
+        <h1>Projetos</h1>
+        <h4>Projeto 1 </h4>
+        <a href="https://github.com/bernardoalmeidasz123/Calculadora-de-poligonos"><button class=buttonpro  type=Button>Clique aqui e saiba mais !!!</button></a>
+        <p>Calculadora de poligonos</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <a href="https://wa.me/5532984620791" target="_blank" rel="noopener" class="buttonfale">Fale Comigo</a>
+    </section>
+
+    <script>
+        // Exemplo simples: destacar link ativo no menu ao clicar
+        const links = document.querySelectorAll('nav.navbar a');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
